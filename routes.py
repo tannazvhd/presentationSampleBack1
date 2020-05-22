@@ -21,8 +21,6 @@ def index():
 @app.route('/login', methods=['POST'])
 def login():
 
-
-
     email=request.get_json()['email']
     password=request.get_json()['password']
 
@@ -30,9 +28,6 @@ def login():
     user = mongo.db.userCollection
     q = user.find_one({'email':email, 'password':password})
     
-
-
-
     # return req['firstname']
     if q is None :
         return jsonify({"login":"Login Fail! Please check your email or password"})
