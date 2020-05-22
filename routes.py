@@ -2,7 +2,7 @@ from app import app
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from flask import Flask,request,jsonify,json
-from bson.json_util import dumps, RELAXED_JSON_OPTIONS,loads
+from bson.json_util import dumps, RELAXED_JSON_OPTIONS
 
 # Mongodb Connection
 app.config["MONGO_URI"] = "mongodb://localhost:27017/usersDatabase"
